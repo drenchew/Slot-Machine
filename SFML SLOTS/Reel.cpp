@@ -1,7 +1,7 @@
 #include "Reel.h"
 #include<iostream>
 
-Reel::Reel(const float x, const float y) : bell(BELL), seven(SEVEN), cherry(CHERRY), watermelon(WATERMELON), _x(x), _y(y)
+Reel::Reel(const float x, const float y) : bell(BELL), seven(SEVEN), cherry(CHERRY), watermelon(WATERMELON),grape(GRAPE), _x(x), _y(y)
 {
     populate();
 }
@@ -25,6 +25,7 @@ void Reel::populate()
         case SEVEN: _reel.push_back(seven); break;
         case WATERMELON: _reel.push_back(watermelon); break;
         case CHERRY: _reel.push_back(cherry); break;
+        case GRAPE: _reel.push_back(grape); break;
         }
     }
 
@@ -36,7 +37,7 @@ void Reel::positionate()
     float temp_y = _y;
     for (auto& reel : _reel)
     {
-        reel.scale(0.8, 0.8);
+       // reel.scale(0.8, 0.8);
         reel.set_position(_x, temp_y);
         temp_y += 80;
     }
@@ -77,9 +78,30 @@ void Reel::updateAnimation() {
     }
 }
 
+
+const SymbolType Reel::get_symbol_type(const size_t& idx) const {
+    if (idx > _reel.size())
+    {
+        return SymbolType::ERROR;
+    }
+    return _reel[idx].get_type();
+}
+
+
 void Reel::calculateFinalPosition() {
     if (_isSpinning) {
-        this->populate();
-        
+        std::cout << "populating\n";
+        this->populate();  
     }
+}
+
+// friend
+std::ostream& operator<<(std::ostream& ostr, const Reel& reel)
+{
+    for (auto& symbol : reel._reel)
+    {
+        ostr << symbol << ' ';
+    }
+    ostr << std::endl;
+    return ostr;
 }

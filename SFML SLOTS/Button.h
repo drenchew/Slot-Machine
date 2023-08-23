@@ -3,11 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 
-#include"TextInterface.h"
+#include"BaseText.h"
 
-class Button : public TextInterface
+class Button final : public BaseText
 {
-public:
+
     sf::RectangleShape _shape;
 
     std::string _btnTxt;
@@ -15,14 +15,14 @@ public:
 
 public:
     Button(const std::string& buttonText, const sf::Vector2f& position, const sf::Vector2f& size) : 
-        TextInterface(position,size), _btnTxt(buttonText)
+        BaseText(position,size), _btnTxt(buttonText)
     {
         _shape.setSize(size);
         _shape.setFillColor(sf::Color::Transparent);
         _shape.setPosition(position);
        // _shape.setOutlineColor(sf::Color::Green);
        // _shape.setOutlineThickness(2.0f);
-
+      
         _text.setString(_btnTxt+ '$');
     }
 

@@ -27,9 +27,6 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inits.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Symbol.h">
@@ -47,14 +44,17 @@
     <ClInclude Include="Reel.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inits.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TextInterface.h">
+    <ClInclude Include="BaseText.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Paterns.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SlotMachineInterface.h">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

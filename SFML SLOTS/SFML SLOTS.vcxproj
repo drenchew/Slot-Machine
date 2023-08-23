@@ -134,16 +134,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Inits.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Reel.cpp" />
     <ClCompile Include="Symbol.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Inits.h" />
+    <ClInclude Include="Paterns.h" />
     <ClInclude Include="Reel.h" />
-    <ClInclude Include="TextInterface.h" />
+    <ClInclude Include="BaseText.h" />
+    <ClInclude Include="SlotMachineInterface.h" />
     <ClInclude Include="UserBalance.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Defines.h" />

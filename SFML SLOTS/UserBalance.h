@@ -6,10 +6,10 @@
 #include <iomanip>
 #include <sstream>
 
-#include"TextInterface.h"
+#include"BaseText.h"
 
 
-class Balance : public TextInterface
+class Balance : public BaseText
 {
 public:
 	Balance() = delete;
@@ -17,7 +17,7 @@ public:
 	virtual ~Balance() = default;
 
 	Balance(const sf::Vector2f& position, const sf::Vector2f& size, double balance) :
-	TextInterface(position,size) , _balance(balance)	
+	BaseText(position,size) , _balance(balance)	
 	{
 		set_text();
 	}
@@ -30,10 +30,10 @@ public:
 
 	void draw(sf::RenderWindow& window) final override
 	{
-		window.draw(_text);
+		BaseText::draw(window);
 	}
 
-	inline const bool valid_balance(const double wanted) const
+	inline const bool check_for_balance(const double wanted) const
 	{
 		return this->_balance >= wanted;
 	}

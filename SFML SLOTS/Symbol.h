@@ -22,6 +22,10 @@ public:
    const sf::Vector2f get_position() const { return this->_symbolSprite.getPosition(); }
 
    void draw(sf::RenderWindow& window) const;
+  bool operator ==(const Symbol& other) const;
+  bool operator !=(const Symbol& other) const;
+
+   friend std::ostream& operator<<(std::ostream& ostr, const Symbol& symbol);
 
 private:
     sf::Texture _symbolTexture;

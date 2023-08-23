@@ -3,7 +3,7 @@
 
 int main() {
   
-    Game slot;
+    SlotMachine slot;
     slot.StartGame();
     
     return 0;
