@@ -1,46 +1,37 @@
+#ifndef BUTONS_H
+#define BUTONS_H
+
 #include <SFML/Graphics.hpp>
 
-class Button
+#include"TextInterface.h"
+
+class Button : public TextInterface
 {
 public:
     sf::RectangleShape _shape;
-    sf::Text _text;
-    sf::Font _font;
-    bool _pressed = false;
+
+    std::string _btnTxt;
     double _bet = 0;
-    float _cornerRadius = 20.0f;
 
 public:
-    Button(const std::string& buttonText, const sf::Vector2f& position, const sf::Vector2f& size)
+    Button(const std::string& buttonText, const sf::Vector2f& position, const sf::Vector2f& size) : 
+        TextInterface(position,size), _btnTxt(buttonText)
     {
-        _font.loadFromFile(".\\BAUHS93.TTF");
-
         _shape.setSize(size);
         _shape.setFillColor(sf::Color::Transparent);
         _shape.setPosition(position);
        // _shape.setOutlineColor(sf::Color::Green);
        // _shape.setOutlineThickness(2.0f);
 
-        _text.setFont(_font);
-        _text.setString(buttonText + "$");
-        _text.setCharacterSize(20);
-        _text.setFillColor(sf::Color::Black);
-        _text.setPosition(position + sf::Vector2f(30, 10));
-
-        // You can customize other properties like text color, etc.
+        _text.setString(_btnTxt+ '$');
     }
 
-    void draw(sf::RenderWindow& window)
+    virtual ~Button() = default;
+
+    void draw(sf::RenderWindow& window) override final
     {
-        // Draw the main rectangle
         window.draw(_shape);
-
-     
-
-
         window.draw(_text);
-
-
     }
 
     bool isMouseOver(const sf::RenderWindow& window)
@@ -54,3 +45,6 @@ public:
         std::string str = this->_text.getString();
         return std::stof(str);}
 };
+
+
+#endif // !BUTONS_H

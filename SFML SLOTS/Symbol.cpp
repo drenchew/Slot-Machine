@@ -1,12 +1,5 @@
 #include "Symbol.h"
 
-#define __BELL__ ".\\bell.png"
-#define __SEVEN__ ".\\seven.png"
-#define __CHERRY__ ".\\cherry.png"
-#define __WATERMELON__ ".\\watermelon.png"
-#define __LOGO__ ".\\Bandoleros.png"
-#define __BACKGROUND__ ".\\back.png"
-
 Symbol::Symbol(): _type(ERROR)
 {}
 
@@ -25,14 +18,11 @@ Symbol::Symbol(SymbolType type) : _type(type)
     _symbolSprite.setTexture(_symbolTexture);
 }
 
+void Symbol::draw(sf::RenderWindow& window) const { window.draw(this->_symbolSprite); }
+
 const SymbolType Symbol::get_type() const
 {
     return _type;
-}
-
-sf::Sprite& Symbol::get_sprite()
-{
-    return _symbolSprite;
 }
 
 void Symbol::set_position(float w, float h)

@@ -15,21 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SFML SLOTS.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Symbol.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Row.cpp">
+    <ClCompile Include="Reel.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inits.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Symbol.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Row.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Defines.h">
@@ -38,7 +41,19 @@
     <ClInclude Include="Button.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="User.h">
+    <ClInclude Include="UserBalance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Reel.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

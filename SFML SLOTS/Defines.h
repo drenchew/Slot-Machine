@@ -3,11 +3,15 @@
 #ifndef DEFINES_H
 #define DEFINES_H
 
+constexpr auto __BELL__ = ".\\assets\\bell.png";
+constexpr auto __SEVEN__ = ".\\assets\\seven.png";
+constexpr auto __CHERRY__ = ".\\assets\\cherry.png";
+constexpr auto __WATERMELON__ = ".\\assets\\watermelon.png";
+constexpr auto __LOGO__ = ".\\assets\\Bandoleros.png";
+constexpr auto __BACKGROUND__ = ".\\assets\\back.png";
 
-#define __BELL__ ".\\bell.png"                 // bell image
-#define __SEVEN__ ".\\seven.png"              // seven (7) image
-#define __CHERRY__ ".\\cherry.png"           // cherry image
-#define __WATERMELON__ ".\\watermelon.png"  // watermelon image
+
+
 
 #define SHIFT 100 // shift symbols of each other
 
@@ -19,9 +23,9 @@ enum SymbolType
     SEVEN,
   
    
-
     LOGO = 100,
     BACKGROUND,
+
 
     ERROR = 404,
 

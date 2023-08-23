@@ -133,15 +133,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Row.cpp" />
-    <ClCompile Include="SFML SLOTS.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Inits.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Reel.cpp" />
     <ClCompile Include="Symbol.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="User.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Inits.h" />
+    <ClInclude Include="Reel.h" />
+    <ClInclude Include="TextInterface.h" />
+    <ClInclude Include="UserBalance.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Defines.h" />
-    <ClInclude Include="Row.h" />
     <ClInclude Include="Symbol.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
