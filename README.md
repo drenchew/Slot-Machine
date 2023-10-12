@@ -7,7 +7,7 @@ SFML Slot -Machine-Demo
 
 
 
-![Slot Machine](SFML%20SLOTS/gameplay/gameplay.png)
+![Slot Machine](SFML%20SLOTS/gameplay/spinning.gif)
 
 Welcome to the SFML Slot Machine Game! This is a simple slot machine game implemented using the Simple and Fast Multimedia Library (SFML). Test your luck and see if you can win big in this virtual slot machine.
 
